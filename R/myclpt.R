@@ -10,6 +10,7 @@
 #' @importFrom grDevices rainbow
 #' @importFrom graphics barplot curve hist layout
 #' @importFrom stats dnorm dpois rpois
+#' @importFrom graphics legend lines locator
 #' @export
 #'
 #'

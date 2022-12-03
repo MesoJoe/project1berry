@@ -7,6 +7,7 @@
 #' @param ymax y maximum
 #' @param ... extras
 #' @importFrom stats density dt rnorm sd
+#' @importFrom graphics legend lines locator
 #' @return graphs
 #'
 #'
