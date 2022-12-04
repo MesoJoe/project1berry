@@ -5,6 +5,8 @@
 #' @param time time
 #'
 #' @return a series of barplots
+#' @importFrom grDevices rainbow
+#' @importFrom graphics barplot hist
 #' @export
 #'
 #' @examples example
@@ -24,3 +26,4 @@ mysample=function(n, iter=10,time=0.5){
     Sys.sleep(time)
   }
 }
+

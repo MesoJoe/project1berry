@@ -5,6 +5,8 @@
 
 #' @importFrom stats runif
 #' @return a histogram
+#' @importFrom grDevices rainbow
+#' @importFrom graphics barplot hist
 #' @export
 #'
 #' @examples mycltfun(n=50,iter=10000)

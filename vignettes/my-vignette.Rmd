@@ -1,0 +1,63 @@
+---
+title: "my-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup}
+library(project1berry)
+```
+
+## Package
+
+<br>The package name is 'project1berry'. There are 1 data file, and 4 functions associated within the package. Below will be examples of the functions.
+
+## mybin() function
+
+<br>The mybin() function has 3 inputs, mybin(iter=100,n=10, p=0.5)<br>
+Where 'iter' is the number of iterations, 'n' is the sample size, and 'p' is the probability used for the binomial function.<br>
+<br>The output of the function is a list of the calculated probabilities, as well as a bargraph in which visualizes the calculated probabilities. Since the input is random, the output is also random for each run of the function.
+
+```{r}
+###Calls the mybin() function 
+
+project1berry::mybin(100,10,0.5)
+```
+
+
+## nycltfun()
+
+<br>The mycltfun() function has 2 inputs, mycltfun(n=50,iter=10000)<br>
+Where 'n' is the sample size, and 'iter' is the number of iterations the function will run through.<br>
+<br>The output is the vector in which holds the calculated means, as well as a bar graph of the vector. The function helps to better understand the 'central limit theorem'
+
+```{r}
+project1berry::mycltfun(2,1000)
+```
+## myhyper() function
+
+<br>The 'myhyper()' function utilizes a hypergeometric distribution, the inputs are myhyper(iter=100,N=20,r=12,n=5), where 'iter' is the number of iterations, 'N' is the larger set, 'r' is the number of successes in the larger set, and 'n' is the number of items drawn from the larger set.<br>
+<br>The output is a table of the probabilities number of successes drawn from the larger set. There is also a bar graph of the probabilities to better visualize the distribution.<br>
+
+```{r}
+
+project1berry::myhyper(100,20,12,5)
+```
+
+## mysample() function 
+
+<br>The 'mysample()' function has three inputs, mysample(n, iter=10,time=0.5).<br> 
+Where 'n' is the number of draws the function takes, the 'iter' is the number of times the function runs through itself, and the 'time' variable is utilized to release the graph of an iteration. A longer time is not recommended for use.<br>
+<br>The output is a series of bar graphs, where the probability distribution is visualized. There are a total of ten choices with equal chance of being picked. The 'n' determines how many times a number between one through ten is chosen for each iteration.
+
+```{r}
+project1berry::mysample(20,3,0.5)
+```
+
+
+
+
+
