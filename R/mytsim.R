@@ -26,7 +26,7 @@ hist(w,freq=FALSE, ylim=c(0,ymax), # Histogram with annotation
 main=substitute(paste("Sample size = ",n[1]," = ",n1," statistic = ",T," iterations= ",iter)),
 xlab=expression(paste(T, "Statistic",sep=" ")), las=1)
 lines(density(w),col="Blue",lwd=3) # add a density plot
-curve(dt(x,n1-1),add=TRUE,col="Red",lty=2,lwd=3) # add a theoretical curve
+curve(dt(w,n1-1),add=TRUE,col="Red",lty=2,lwd=3) # add a theoretical curve
 title=expression(T==frac((bar(y)-mu),s/sqrt(n1))) #mathematical annotation -see ?plotmath
 legend(locator(1),c("Simulated","Theoretical"),col=c("Blue","Red"),lwd=4,lty=1:2,bty="n",title=title) # Legend #
 return(list(w=w,summary=summary(w),sd=sd(w),fun="T")) # some output to use if needed
